@@ -62,4 +62,10 @@ app.get('/', (req, res) => {
   });
 });
 
+app.get('/menu', (req, res) => {
+  res.render('menu.ejs', {
+   restaurant: RESTAURANT
+  });
+});
+
 app.listen(3000);
