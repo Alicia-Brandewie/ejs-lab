@@ -70,7 +70,8 @@ app.get('/menu', (req, res) => {
 
 app.get('/menu/:category', (req, res) => {
   res.render('category.ejs', {
-    category: req.params.category,
+    category:`${req.params.category.charAt(0).toUpperCase()}${req.params.category.slice(1)}`,
+      // attribute: https://www.geeksforgeeks.org/javascript/how-to-make-first-letter-of-a-string-uppercase-in-javascript/
     menuItems: RESTAURANT.menu.filter((banana) => {
       if (banana.category === req.params.category) {
         return banana
