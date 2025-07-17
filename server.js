@@ -64,7 +64,7 @@ app.get('/', (req, res) => {
 
 app.get('/menu', (req, res) => {
   res.render('menu.ejs', {
-   restaurant: RESTAURANT
+   restaurant: RESTAURANT.menu
   });
 });
 

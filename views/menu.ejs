@@ -10,6 +10,13 @@
 <body>
     <%- include('./partials/nav') %>
         <h1>Full Menu</h1>
+
+        <% restaurant.forEach((menu)=> {%>
+                <p>
+                    <%= menu.name %>, <%= menu.price %>, <%= menu.rating %>, <%= menu.details%>
+                </p>
+                <% }) %>
+
 </body>
 
 </html>
