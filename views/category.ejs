@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
+    <title> <%=category%></title>
 </head>
 
 <body>
     <%- include('./partials/nav') %>
-        <h1>Full Menu</h1>
+        <h1><%=category%></h1>
 
-        <% restaurant.forEach((menu)=> {%>
+        <% menuItems.forEach((menu)=> {%>
             <p>
                 <%= menu.name %>, <%= menu.price %>, <%= menu.rating %>, <%= menu.details%>
             </p>
